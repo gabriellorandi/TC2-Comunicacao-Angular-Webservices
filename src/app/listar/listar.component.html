@@ -1,0 +1,26 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Preço</td>
+                <td>Descrição</td>
+                <td>Título</td>
+                <td>Editar</td>
+                <td>Excluir</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaProdutos">
+                <td>{{p.price}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.title}}</td>
+                <td>
+                    <button (click)="atualizar(p)">Editar</button>                   
+                </td>
+                <td>
+                    <button (click)="deletar(p._id)">Deletar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
